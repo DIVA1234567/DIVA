@@ -25,7 +25,7 @@ on the popularity of their biographical page in Wikipedia.
 | historical_popularity_index: An index value measuring approximately the popularity                                                    |
 
 ## Census Dataset 
- The dataset contains 300K records with 40 attributes from the U.S. Census Bureau. This dataset can be found here [source](https://archive.ics.uci.edu/ml/machine-learning-databases/census-income-mld/census-income.html), containing population data.
+ The dataset contains 300K records with 40 attributes from the U.S. Census Bureau. This dataset can be found [here](https://archive.ics.uci.edu/ml/machine-learning-databases/census-income-mld/census-income.html), containing population data.
 
 | **Attribute Details** |
 | :------------------------------------------------ |
