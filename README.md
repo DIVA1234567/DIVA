@@ -29,6 +29,7 @@ on the popularity of their biographical page in Wikipedia.
 
 | **Attribute Details** |
 | :------------------------------------------------ |
+|id: record id|
 |age: continuous.|
 |workclass: Private, Self-emp-not-inc, Self-emp-inc, Federal-gov, Local-gov, State-gov, Without-pay, Never-worked.|
 |education: Bachelors, Some-college, 11th, HS-grad, Prof-school, Assoc-acdm, |
@@ -59,6 +60,10 @@ This dataset can be found here [source](https://archive.ics.uci.edu/ml/datasets/
 |Credit amount|
 |Duration|
 |Purpose: car, furniture/equipment, radio/TV, domestic appliances, repairs, education, business, vacation/others|
+
+
+## Synthetic Population Data (Pop-Syn)
+We generate a synthetic dataset  describing population characteristics (age, education, race, gender, income, marital status, occupation).  We use the [Synner.io](http://synner.io) tool to declaratively specify the distribution properties in the characteristic attributes. The size of generated is 100,000.  The distribution we generated are uniform, Gaussian (mean = 0, with 1 standard deviation), and Zipfian (alpha = 1). 
 
 ## Diversity Constraints
 
@@ -219,6 +224,22 @@ Job(skilled)[605, 605]
 Job(unskilled and resident)[192, 192]
 Job(high)[142, 142]
 Job(unskilled and non-resident)[21, 21]
+```
+
+
+### Comparison with SmallDB
+To model diversity constraints, we define Q to be COUNT queries containing the desired characteristic attribute values. 
+For example, if the given diversity constraint is sex(Male) [208868, 286882], then the COUNT query will be `select count(*) from Census where sex = "Male";`
+
+```
+sex(Male) [208868, 286882]
+sex(Female) [103246, 143441]
+race(White)[266631, 286882]
+race(Black)[29945, 29945]
+race(Asian-Pac-Islander)[9959, 9959]
+race(Amer-Indian-Eskimo)[2981, 2981]
+race(Other)[2598, 2598]
+sex(Male)race(White)[186331, 286882]
 ```
 
 
