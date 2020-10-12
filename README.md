@@ -226,6 +226,23 @@ Job(high)[142, 142]
 Job(unskilled and non-resident)[21, 21]
 ```
 
+### Diversity Constraints Defined on Synthetic Population Data
+
+Diversity constraints on attributes Race and Gender.
+
+```
+sex(Male) [45000, 55000]
+sex(Female) [45000, 55000]
+
+race(White)[34000, 42000]
+race(Black)[16000, 28000]
+race(Asian-Pac-Islander)[8000, 14000]
+race(Amer-Indian-Eskimo)[9000, 15000]
+race(Other)[6000, 8000]
+
+sex(Male)race(White)[25000, 32000]
+```
+
 
 ### Comparison with SmallDB
 To model diversity constraints, we define Q to be COUNT queries containing the desired characteristic attribute values. 
